@@ -100,8 +100,51 @@ include('includes/fonctions.php');
     debug($tab[0][2]);
     debug($tab[2][3]);
 
+    echo $tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3];
+
+    $produits = [
+        ['nom' => 'chaussettes', 'prix' => 10],
+        ['nom' => 'vélo', 'prix' => 500],
+        ['nom' => 'carotte', 'prix' => 2],
+        ['nom' => 'boulon', 'prix' => 9],
+
+    ];
+
+    debug($produits);
+    ?>
+
+    <ul>
+        <?php
+        foreach ($produits as $produit) {
+        ?>
+            <li>
+                <?php echo $produit['nom'] . ' : ' . $produit['prix'] . ' €';
+                ?>
+                <!-- Ou -->
+                <?= $produit['nom'] ?> : <?= $produit['prix'] ?> €
+            </li>
+        <?php } ?>
+    </ul>
+    <hr>
+
+    <?php
+
+    $nbs = [27, 15, 34, 379, 248, 5643, 81, 211, 999, 142, 300, 572];
+
+    echo "<ul>";
+
+    foreach ($nbs as $nb) {
+        if ($nb % 2 == 0) {
+            echo "<li>$nb : Pair";
+        } else {
+            echo "<li>$nb : Impair";
+        }
+    }
+
+    echo "</ul>";
 
     ?>
+
 </main>
 
 <?php
