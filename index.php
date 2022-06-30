@@ -142,6 +142,25 @@ include('includes/fonctions.php');
     }
 
     echo "</ul>";
+    ?>
+    <hr>
+    <?php
+    $users = [
+        "firstname" => "Mike",
+        "lastname" => "Olg",
+        "pseudo" => "",
+        "age" => 34,
+        "food" => "",
+        "sport" => "",
+    ];
+
+    foreach ($users as $key => $value) {
+        if ($value == "") {
+            echo "$key : information <br>";
+        } else {
+            echo "$key : value <br>";
+        }
+    };
 
     ?>
 
