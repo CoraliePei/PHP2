@@ -162,6 +162,17 @@ include('includes/fonctions.php');
         }
     };
 
+    $nombres = [4, 15, 2, 145, 42, 5, 78, 12];
+    echo max($nombres);
+
+    $nbmax = $nombres[0];
+    foreach ($nombres as $nbr) {
+        if ($nbr > $nbmax) {
+            $nbmax = $nbr;
+        }
+    }
+    echo $nbmax;
+
     ?>
 
 </main>
